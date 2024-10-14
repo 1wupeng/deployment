@@ -17,14 +17,14 @@ c_min, c_max = 0, 9.6
 # 创建表单
 st.title("Lunar Soil Prediction App")
 
-相对密实度 = st.number_input("相对密实度", min_value=0.0, max_value=1.0, value=0.5)
-试样密度 = st.number_input("试样密度g/cm³", min_value=1.06, max_value=2.245, value=1.5)
-D60 = st.number_input("D60/um", min_value=21.69, max_value=880.0, value=50.0)
-D10 = st.number_input("D10/um", min_value=2.19, max_value=94.0, value=10.0)
+相对密实度 = st.number_input("Relative density", min_value=0.0, max_value=1.0, value=0.5)
+试样密度 = st.number_input("Sample density (g/cm³)", min_value=1.06, max_value=2.245, value=1.5)
+D60 = st.number_input("D60 {mu}m", min_value=21.69, max_value=880.0, value=50.0)
+D10 = st.number_input("D10 {mu}m", min_value=2.19, max_value=94.0, value=10.0)
 Cc = st.number_input("Cc", min_value=0.17, max_value=4.85, value=1.0)
 Cu = st.number_input("Cu", min_value=2.2, max_value=140.36, value=10.0)
-最小密度 = st.number_input("最小密度g/cm³", min_value=0.95, max_value=1.76, value=1.0)
-最大密度 = st.number_input("最大密度g/cm³", min_value=1.23, max_value=2.44, value=1.5)
+最小密度 = st.number_input("Minimum density (g/cm³)", min_value=0.95, max_value=1.76, value=1.0)
+最大密度 = st.number_input("Maximum density (g/cm³)", min_value=1.23, max_value=2.44, value=1.5)
 
 if st.button("预测"):
     X_input = np.array([相对密实度, 试样密度, D60, D10, Cc, Cu, 最小密度, 最大密度])
