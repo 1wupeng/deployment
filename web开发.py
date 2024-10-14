@@ -97,7 +97,7 @@ if st.session_state.history:
         st.success("🗑️ History cleared!")
 
 # 页脚
-st.markdown("""---\nDeveloped by [Your Name].\n""")
+st.markdown("""---\nDeveloped by WP.\n""")
 
 # 自定义样式
 st.markdown(
